@@ -1,0 +1,63 @@
+@import "../../global.scss";
+
+.topbar{
+    width: 100%;
+    height: 70px;
+    background-color: #222930;
+    color: $mainColor;
+    position: fixed;
+    bottom: 80px;
+    top: 0;
+    z-index: 3;
+    overflow: visible;
+    //background: url(https://res.cloudinary.com/dn4nxz7f0/image/upload/v1603170394/navigation_trong_suot/pexels-life-of-pix-7919_zydtt2.jpg);
+
+    .wrapper{
+        padding-bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .left{
+            display: flex;
+            align-items: center;
+
+            .topImg{
+                padding-bottom: 30px;
+                display: flex;
+                width: 100px;
+                height: 50px;
+                margin-right: 80px;
+                object-fit: contain;
+                // color: inherit;
+            }
+            
+        }
+        .right{
+            
+            display: flex;
+            margin-left: 40px;
+            align-items: center;
+            color: #E9E9E9;
+            .itemContainer{
+                margin-bottom: 20px;
+                display: flex;
+                // align-items: center;
+                margin-right: 15px;
+                icon{
+                    font-size: 20px;
+                    margin-right: 0px;
+
+                }
+
+                span{
+                    font-size: 15px;
+                    font-weight: 200px;//do day chu
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+        }
+            }
+
+        }
+        
+    }

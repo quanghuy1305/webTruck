@@ -1,0 +1,148 @@
+@import "../../global.scss";
+
+
+.intro{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+   
+    .arrow{
+        height: 50px;
+        position: absolute;
+        cursor: pointer;
+        color: antiquewhite;
+
+        @include mobile{
+            display: none;
+        }
+
+        &.left{
+            left: 100px;
+            transform: rotateY(180deg);
+        }
+        &.right{
+            right: 100px;
+        }
+    }
+
+   
+
+    .slider{
+        margin-bottom: 20px;
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-out;
+
+        @include mobile{
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .container{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: linear-gradient(
+      rgba(255, 255, 255, 0.116),
+      rgba(255, 255, 255, 0.116)
+    );
+
+
+            .item{
+                width: 850px;
+                height: 100%;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                // .left{
+                //     flex: 4;
+                //     height: 100%;
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                //     overflow: hidden;
+                //     margin-right: 100px;
+
+                //     img{
+                //         width: 750px;
+                //     }
+                // }
+
+                .right{
+                    background-color: rgba(20, 87, 121, 0.795);
+                    flex: 0.5;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 20px;
+                    .rightContainer{
+                        color: white;
+                        width: 90%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        h2{
+                            font-size: 28px;
+                        }
+                        p{
+                            margin-bottom: 20px;
+                            font-size: 15px;
+                            text-align: justify;
+                            text-indent: 20px;
+                            
+                        }
+                        li{
+                            font-size: 20px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .background{
+        display:inline-block;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        
+        
+        img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            z-index: 1;
+           
+        }
+    }
+
+    a{
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        height: 50px;
+        cursor: pointer;
+        transform: rotate(90deg);
+        img{
+            width: 40px; 
+            animation: arrowBlink 1s infinite;
+        }
+
+        @keyframes arrowBlink {
+            100%{
+                opacity:0;
+            }
+        }
+    }
+    
+}
